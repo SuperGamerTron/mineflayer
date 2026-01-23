@@ -216,13 +216,10 @@ for (const supportedVersion of mineflayer.testedVersions) {
           headPitch: 14,
           metadata: []
         }
-        if (bot.registry.supportFeature('entityVelocityIsLpVec3')) {
-          data.movement = { x: 0, y: 0, z: 0 }
-        } else {
-          data.velocityX = 0
-          data.velocityY = 0
-          data.velocityZ = 0
-        }
+        data.velocity = { x: 0, y: 0, z: 0 }
+        data.velocityX = 0
+        data.velocityY = 0
+        data.velocityZ = 0
         client.write(bot.registry.supportFeature('consolidatedEntitySpawnPacket') ? 'spawn_entity' : 'spawn_entity_living', data)
         client.write('entity_effect', {
           entityId: 8,
@@ -605,13 +602,10 @@ for (const supportedVersion of mineflayer.testedVersions) {
               headPitch: 0,
               objectData: 1
             }
-            if (bot.registry.supportFeature('entityVelocityIsLpVec3')) {
-              data.movement = { x: 0, y: 0, z: 0 }
-            } else {
-              data.velocityX = 0
-              data.velocityY = 0
-              data.velocityZ = 0
-            }
+            data.velocity = { x: 0, y: 0, z: 0 }
+            data.velocityX = 0
+            data.velocityY = 0
+            data.velocityZ = 0
             client.write('spawn_entity', data)
           } else {
             client.write('named_entity_spawn', {
@@ -690,13 +684,10 @@ for (const supportedVersion of mineflayer.testedVersions) {
               headPitch: 0,
               objectData: 1
             }
-            if (bot.registry.supportFeature('entityVelocityIsLpVec3')) {
-              data.movement = { x: 0, y: 0, z: 0 }
-            } else {
-              data.velocityX = 0
-              data.velocityY = 0
-              data.velocityZ = 0
-            }
+            data.velocity = { x: 0, y: 0, z: 0 }
+            data.velocityX = 0
+            data.velocityY = 0
+            data.velocityZ = 0
             client.write('spawn_entity', data)
           } else {
             client.write('named_entity_spawn', {
@@ -754,13 +745,10 @@ for (const supportedVersion of mineflayer.testedVersions) {
               { type: 0, key: bot.registry.supportFeature('mcDataHasEntityMetadata') ? 'int' : 1, value: 1 }
             ]
           }
-          if (bot.registry.supportFeature('entityVelocityIsLpVec3')) {
-            data.movement = { x: 0, y: 0, z: 0 }
-          } else {
-            data.velocityX = 0
-            data.velocityY = 0
-            data.velocityZ = 0
-          }
+          data.velocity = { x: 0, y: 0, z: 0 }
+          data.velocityX = 0
+          data.velocityY = 0
+          data.velocityZ = 0
           client.write(bot.registry.supportFeature('consolidatedEntitySpawnPacket') ? 'spawn_entity' : 'spawn_entity_living', data)
         })
       })
@@ -803,13 +791,10 @@ for (const supportedVersion of mineflayer.testedVersions) {
             headPitch: 0,
             objectData: 1
           }
-          if (bot.registry.supportFeature('entityVelocityIsLpVec3')) {
-            data.movement = { x: 0, y: 0, z: 0 }
-          } else {
-            data.velocityX = 0
-            data.velocityY = 0
-            data.velocityZ = 0
-          }
+          data.velocity = { x: 0, y: 0, z: 0 }
+          data.velocityX = 0
+          data.velocityY = 0
+          data.velocityZ = 0
           client.write('spawn_entity', data)
 
           const metadataPacket = {
@@ -947,13 +932,10 @@ for (const supportedVersion of mineflayer.testedVersions) {
           headPitch: 0,
           metadata: []
         }
-        if (bot.registry.supportFeature('entityVelocityIsLpVec3')) {
-          data.movement = { x: 0, y: 0, z: 0 }
-        } else {
-          data.velocityX = 0
-          data.velocityY = 0
-          data.velocityZ = 0
-        }
+        data.velocity = { x: 0, y: 0, z: 0 }
+        data.velocityX = 0
+        data.velocityY = 0
+        data.velocityZ = 0
         client.write(bot.registry.supportFeature('consolidatedEntitySpawnPacket') ? 'spawn_entity' : 'spawn_entity_living', data)
 
         client.write('map_chunk', generateChunkPacket(chunk))
